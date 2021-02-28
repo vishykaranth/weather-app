@@ -21,7 +21,13 @@ public class WeatherRequest {
         return temp - 273;
     }
 
-    public int day() {
-        return date.getDay();
+    public String getMessage() {
+        if ("Rain".equalsIgnoreCase(weatherCondition)) {
+            return "Carry umbrella";
+        } else if (maxTemp > 40) {
+            return "Use sunscreen lotion";
+        }
+
+        return "";
     }
 }
